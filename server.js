@@ -21,7 +21,7 @@ const url = process.env.DB_URL;
 const dbName = process.env.DB_NAME;
 
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
         if(error) {
             throw error;
@@ -31,7 +31,7 @@ app.listen(3000, () => {
     });
 });
 
-  console.log(`Server running on localhost:3000`)
+  console.log(`Server running on localhost:4000`)
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: true}))
